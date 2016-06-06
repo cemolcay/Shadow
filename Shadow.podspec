@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Shadow"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
 s.summary      = "A simple object for adding/removing shadows from your `CALayer`s or `UIView`s."
 
   # This description is used to generate tags and improve search results.
@@ -106,7 +106,7 @@ view.applyShadow(shadow: nil)
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/cemolcay/Shadow.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/cemolcay/Shadow.git", :tag => "0.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
