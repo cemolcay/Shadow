@@ -14,6 +14,7 @@
 		B29AE01C1D05129D003C94E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29AE01A1D05129D003C94E5 /* LaunchScreen.storyboard */; };
 		B29AE0271D05129D003C94E5 /* ShadowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE0261D05129D003C94E5 /* ShadowTests.swift */; };
 		B29AE0321D05129D003C94E5 /* ShadowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE0311D05129D003C94E5 /* ShadowUITests.swift */; };
+		B29AE0401D0512AB003C94E5 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29AE03F1D0512AB003C94E5 /* Shadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B29AE02D1D05129D003C94E5 /* ShadowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29AE0311D05129D003C94E5 /* ShadowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUITests.swift; sourceTree = "<group>"; };
 		B29AE0331D05129D003C94E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29AE03F1D0512AB003C94E5 /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B29AE0181D05129D003C94E5 /* Assets.xcassets */,
 				B29AE01A1D05129D003C94E5 /* LaunchScreen.storyboard */,
 				B29AE01D1D05129D003C94E5 /* Info.plist */,
+				B29AE03F1D0512AB003C94E5 /* Shadow.swift */,
 			);
 			path = Shadow;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29AE0401D0512AB003C94E5 /* Shadow.swift in Sources */,
 				B29AE0141D05129D003C94E5 /* ViewController.swift in Sources */,
 				B29AE0121D05129D003C94E5 /* AppDelegate.swift in Sources */,
 			);
