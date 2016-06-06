@@ -106,7 +106,7 @@ view.applyShadow(shadow: nil)
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/Shadow.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/cemolcay/Shadow.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
