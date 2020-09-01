@@ -29,11 +29,11 @@ public struct Shadow {
     opacity: Float? = nil,
     offset: CGSize? = nil,
     path: UIBezierPath? = nil) {
-    self.color = color ?? UIColor.grayColor()
-    self.radius = radius ?? 5
+    self.color   = color ?? UIColor.gray
+    self.radius  = radius ?? 5
     self.opacity = opacity ?? 1
-    self.offset = offset ?? CGSize(width: 0, height: 1)
-    self.path = path
+    self.offset  = offset ?? CGSize(width: 0, height: 1)
+    self.path    = path
   }
 }
 
@@ -41,39 +41,39 @@ public struct Shadow {
 public extension CALayer {
   /// Applys shadow if given object is not nil.
   /// Removes shadow if given object is nil.
-  public func applyShadow(shadow shadow: Shadow? = nil) {
-    shadowColor = shadow?.color.CGColor ?? UIColor.clearColor().CGColor
-    shadowOpacity = shadow?.opacity ?? 0
-    if let shadow = shadow {
-      if let path = shadow.path {
-        shadowRadius = shadow.radius ?? 0
-        shadowOffset = shadow.offset ?? CGSize.zero
-        shadowPath = path.CGPath
-      } else {
-        var shadowRect = bounds
-        shadowRect.origin = CGPoint(
-          x: bounds.origin.x + shadow.offset.width,
-          y: bounds.origin.y + shadow.offset.height)
-        let path = UIBezierPath(
-          roundedRect: shadowRect,
-          cornerRadius: shadow.radius)
-        shadowPath = path.CGPath
-        shadowRadius = 0
-        shadowOffset = CGSize.zero
-      }
-    } else {
-      shadowRadius = 0
-      shadowOffset = CGSize.zero
-      shadowPath = nil
+    func applyShadow(_ shadow: Shadow? = nil) {
+        shadowColor   = shadow?.color.cgColor ?? UIColor.clear.cgColor
+        shadowOpacity = shadow?.opacity ?? 0
+        if let shadow = shadow {
+            if let path = shadow.path {
+                shadowRadius = shadow.radius
+                shadowOffset = shadow.offset
+                shadowPath   = path.cgPath
+            } else {
+                var shadowRect = bounds
+                shadowRect.origin = CGPoint(
+                    x: bounds.origin.x + shadow.offset.width,
+                    y: bounds.origin.y + shadow.offset.height)
+                let path = UIBezierPath(
+                    roundedRect: shadowRect,
+                    cornerRadius: shadow.radius)
+                shadowPath   = path.cgPath
+                shadowRadius = 0
+                shadowOffset = CGSize.zero
+            }
+        } else {
+            shadowRadius = 0
+            shadowOffset = CGSize.zero
+            shadowPath   = nil
+        }
     }
-  }
 }
 
 /// Public extension of UIView for applying or removing `Shadow`
 public extension UIView {
   /// Applys shadow on its layer if given object is not nil.
   /// Removes shadow on its layer if given object is nil.
-  public func applyShadow(shadow shadow: Shadow? = nil) {
-    layer.applyShadow(shadow: shadow)
-  }
+    func applyShadow(_ shadow: Shadow? = nil) {
+        layer.applyShadow(shadow)
+    }
 }
